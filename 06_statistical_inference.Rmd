@@ -1,0 +1,68 @@
+---
+title: "Coursera Data Science Specialization"
+subtitle: "06 Statistical Inference"
+author: "Georg Maubach"
+date: "4 June 2017"
+output:
+  html_document: default
+  html_notebook: default
+---
+
+# Week 01
+## Module 01 Introduction
+### Introduction Video
+
+- Formal statistical inference ^[Schlussfolgerung] is: "Generating conclusions about a population from a noisy sample.".  
+- Without statistical inference, we're simply living within our data. With statistical inference, we're trying to generate new knowledge. We're trying to extend beyond our data to a population to give answers. With statistical inference, our estimators have actual things that they're estimating.  
+- Subject of the course is "frequency style statistical inference". We want to infer facts about a population using noisy statistical data where uncertainty must be accounted for.
+- There a difficulties of trying to use data to create general conclusions about a population:
+    - Is the sample representative of the population that we would like to draw inferences about?
+    - Are there known and observed, known and unobserved or unknown and unobserved variables that contaminate our conclusions?
+    - Is there systematic bias ^[Verzerrung] created by missing data or the design or conduct of the study?
+    - What randomness exists in the data and how do we use or adjust for it? Here randomness can either by explicit via randomization or random sampling, or implicit as the aggregation of many complex unknown processes.
+    - Are we trying to estimate an underlying mechanistic model of phenomena under study?
+
+[Transcrpt](./transcripts/week-01_mod-01_chap-01_introduction_transcript.txt)  
+[Supplement](./supplements/week-01_mod-01_chap-01_Introduction_Supplement.pdf)  
+
+### Course Materials  
+
+- [Data Science Specialization on git](https://github.com/bcaffo/courses/tree/master/06_StatisticalInference)
+- [Course Material on git](https://github.com/DataScienceSpecialization/courses/tree/master/06_StatisticalInference)
+
+Clone the directory using:
+
+    - git clone https://github.com/bcaffo/courses.git or  
+    - git clone git@github.com:bcaffo/courses.git  
+
+- [Youtube](https://www.youtube.com/playlist?list=PLpl-gQkQivXiBmGyzLrUjzsblmQsLtkzJ)
+
+- [Course Book Buy](https://leanpub.com/LittleInferenceBook)
+- [Course Book Online](https://leanpub.com/LittleInferenceBook/read)
+- [Course Book github](https://github.com/bcaffo/LittleInferenceBook)
+- [Course Book leanpub](https://leanpub.com/LittleInferenceBook) (on purchase, all updates free, including homework)
+
+- Twitter: Brian Caffo: (@bcaffo), Roger Peng (@rdpeng), Jeff Leek (@jtleek), The Department of Biostat (@jhubiostat).
+
+- [Learning Community](http://datasciencespecialization.github.io/)
+- [Community Contributing](https://github.com/DataScienceSpecialization/DataScienceSpecialization.github.io#contributing)
+
+### Quizzes
+Quizzes cover different parts of the course:
+
+- Quiz 1 covers lectures 1 - 4
+- Quiz 2 covers lectures 5 - 7
+- Quiz 3 covers lectures 8 - 10
+- Quiz 4 covers lectures 8 - 13
+
+Quiz 3 and 4 cover a lot of overlapping material.
+
+### Homework
+
+**Remark:** The sequence within the course might be different, please see course book!
+
+- http://bcaffo.github.io/courses/06_StatisticalInference/homework/hw1.html#1
+- http://bcaffo.github.io/courses/06_StatisticalInference/homework/hw2.html#1
+- http://bcaffo.github.io/courses/06_StatisticalInference/homework/hw3.html#1
+- http://bcaffo.github.io/courses/06_StatisticalInference/homework/hw4.html#1
+
