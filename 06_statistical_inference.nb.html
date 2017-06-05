@@ -240,6 +240,160 @@ $(document).ready(function () {
 <li><a href="http://bcaffo.github.io/courses/06_StatisticalInference/homework/hw3.html#1" class="uri">http://bcaffo.github.io/courses/06_StatisticalInference/homework/hw3.html#1</a></li>
 <li><a href="http://bcaffo.github.io/courses/06_StatisticalInference/homework/hw4.html#1" class="uri">http://bcaffo.github.io/courses/06_StatisticalInference/homework/hw4.html#1</a></li>
 </ul>
+</div>
+</div>
+<div id="module-2-probability" class="section level2">
+<h2>Module 2 Probability</h2>
+<p>In this module we discuss probability, the foundation of statistical analysis. Probability assigns a number between 0 and 1 to events to give a sense of the “chance” of the event. Probability has become our default model for apparently random phenomena. Our eventual goal is to use probability models, our formal mechanism for connecting our data to a population. However, before we get to probability models, we need to understand the basics of probability calculus. The next few lectures cover these basics.</p>
+<div id="further-reading" class="section level3">
+<h3>Further Reading</h3>
+<ul>
+<li><p>More complete treatment of the topic in class “Mathematical Biostatistics Boot Camp 1” at:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=jkUqDVtpKs4&amp;list=PLpl-gQkQivXhk6qSyiNj51qamjAtZISJ-" class="uri">https://www.youtube.com/watch?v=jkUqDVtpKs4&amp;list=PLpl-gQkQivXhk6qSyiNj51qamjAtZISJ-</a></li>
+<li><a href="https://www.coursera.org/learn/biostatistics" class="uri">https://www.coursera.org/learn/biostatistics</a> -<a href="https://github.com/bcaffo/Caffo-Coursera" class="uri">https://github.com/bcaffo/Caffo-Coursera</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="video-1-introduction-to-probability" class="section level3">
+<h3>Video 1 Introduction to probability</h3>
+<ul>
+<li>In an random number experiment a probality measure is a population that summarizes the randomness.</li>
+<li>When we talk about probability, we’re not talking about something that is in the data that we have, but as a conceptual thing that exists in the population that we would like to estimate.<br />
+</li>
+<li>The probability takes a possible outcome of the experiment and assigns it a number between 0 and 1.<br />
+. Probability must follow these rules:
+<ul>
+<li>The probability that nothing occurs is 0.</li>
+<li>The probablity that something occurs is 1.</li>
+<li>The probability of something is 1 minus the probability that the opposite occurs.</li>
+<li>The probability of at least one of two (or more) things that can not simultaneously occur (= mutually exclusive) is the sum of their respective probablities.</li>
+<li>If an event A implies on the occurance of event B, then the probability of A occuring is less than the probability that B occurs.</li>
+<li>For any two events the probability that at least one occurs is the sum of their probabilities minus their intersection.</li>
+</ul></li>
+</ul>
+</div>
+<div id="video-2-probability-mass-function-pmf" class="section level3">
+<h3>Video 2 Probability Mass Function (PMF)</h3>
+<div id="random-variable" class="section level4">
+<h4>Random Variable</h4>
+<ul>
+<li>A random variable is a numeric outcome of an experiment.</li>
+<li>Random variables come in two varieties: discrete and continuous:
+<ul>
+<li>discrete variables:
+<ul>
+<li>take only a countable number of possibilities</li>
+<li>we talk about the possibility that they take specific values</li>
+</ul></li>
+<li>continous variables:
+<ul>
+<li>can take any value on the real line (or a subset of the real line)</li>
+<li>we talk about the probability that they lay within some range.</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="probability-mass-function-pmf" class="section level4">
+<h4>Probability MASS Function (PMF)</h4>
+<ul>
+<li>A probability mass function evaluated at a value corresponds to the probability that the random variable takes that value.<br />
+</li>
+<li>To be valid PMF a function “p” must satisfy:
+<ul>
+<li>It must be equal to or langer than “0”.</li>
+<li>The sum of possible values adds up to 1.</li>
+</ul></li>
+</ul>
+</div>
+<div id="probability-density-function-pdf" class="section level4">
+<h4>Probability Density Function (PDF)</h4>
+<ul>
+<li>The probability density function is a function that is associated with a continuous variable.<br />
+</li>
+<li>Areas under the PDF correspond to the probabilities for that random variable.<br />
+</li>
+<li>A valid PDF must satisfy:
+<ul>
+<li>It must be equal to or larger than “0” everywhere.</li>
+<li>The total area under it must be one.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="cumulative-distribution-function-cdf-and-survival-function-sf" class="section level3">
+<h3>Cumulative Distribution Function (CDF) and Survival Function (SF)</h3>
+<p>Certain areas are so useful that we give them names:</p>
+<ol style="list-style-type: decimal">
+<li>The <strong>Cumulative Distribution Function (CDF)</strong> of a random variable “X” (discrete or continuous) returns the probability that the random variable is less than or equal to the value x:</li>
+</ol>
+<p><span class="math inline">\(F(x) = P(X &lt;= x)\)</span> # with P = probability</p>
+<ol start="2" style="list-style-type: decimal">
+<li>The <strong>Survival Function (SF)</strong> of a random variable “X” is defined as the probability that the random variable is greater than the value x:</li>
+</ol>
+<p><span class="math inline">\(S(x) = P(X &gt;= x)\)</span> # with P = probability</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Notice that:</li>
+</ol>
+<p><span class="math inline">\(S(x) = 1 - F(x)\)</span></p>
+</div>
+<div id="qunatiles" class="section level3">
+<h3>Qunatiles</h3>
+<ul>
+<li>Quantiles are sample quantities. Here we define their population analogs.</li>
+</ul>
+<div id="definition-quantile" class="section level4">
+<h4>Definition Quantile</h4>
+<ul>
+<li>The <span class="math inline">\(a{th}\)</span> <strong>quantile</strong> of distribution with distribution function <span class="math inline">\(F\)</span> is a point <span class="math inline">\(x_\alpha\)</span> so that <span class="math inline">\(F(x_\alpha) = \alpha\)</span>.</li>
+</ul>
+</div>
+<div id="definition-percentile" class="section level4">
+<h4>Definition Percentile</h4>
+<ul>
+<li>A <strong>percentile</strong> is simply a quantile with <span class="math inline">\(\alpha\)</span> expressed as a percent.</li>
+</ul>
+</div>
+<div id="definition-median" class="section level4">
+<h4>Definition Median</h4>
+<ul>
+<li>The <strong>median</strong> is the <span class="math inline">\(50^{th}\)</span> percentile.</li>
+</ul>
+</div>
+<div id="exammple" class="section level4">
+<h4>Exammple</h4>
+<p>The <span class="math inline">\(95°{th}\)</span> percentile of a distribution is the point so that:</p>
+<ol style="list-style-type: decimal">
+<li>The probability that a random variable drawn from the population is less is 95 %.</li>
+<li>The probability that a random variable drawn from the population is more is 5 %.</li>
+</ol>
+</div>
+<div id="quantiles-in-r" class="section level4">
+<h4>Quantiles in R</h4>
+<p>R can approximate quantiles for you for common distributions:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBxYmV0YShwLCBzaGFwZTEsIHNoYXBlMiwgbmNwID0gMCwgbG93ZXIudGFpbCA9IFRSVUUsIGxvZy5wID0gRkFMU0UpXG4jIHAgPSB2ZWN0b3Igb2YgcHJvYmFiaWxpdGllc1xuIyBzaGFwZTEsIHNoYXBlMiA9IG5vbi1uZWdhdGl2ZSBwYXJhbWV0ZXJzIG9mIHRoZSBCZXRhIGRpc3RyaWJ1dGlvblxucWJldGEoMC41LCAyLCAxKVxuYGBgIn0= -->
+<pre class="r"><code># qbeta(p, shape1, shape2, ncp = 0, lower.tail = TRUE, log.p = FALSE)
+# p = vector of probabilities
+# shape1, shape2 = non-negative parameters of the Beta distribution
+qbeta(0.5, 2, 1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+</div>
+<div id="summary" class="section level3">
+<h3>Summary</h3>
+<ul>
+<li>You might be wondering at this point “I have heard of the median before, it did not require integratin. Where is the data?”.<br />
+</li>
+<li>We are referring to <strong>population quantities</strong>. Therefore, the median being discussed is the population median.<br />
+</li>
+<li>A probability model connects the data to the population using assumptions.<br />
+</li>
+<li>Therefore, the median we are discussing is the <strong>estimand</strong> <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>, the sample median will be the <strong>estimator</strong> <a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>.</li>
+</ul>
 <!-- rnb-text-end -->
 </div>
 </div>
@@ -249,10 +403,12 @@ $(document).ready(function () {
 <ol>
 <li id="fn1"><p>Schlussfolgerung<a href="#fnref1">↩</a></p></li>
 <li id="fn2"><p>Verzerrung<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>Schätzung<a href="#fnref3">↩</a></p></li>
+<li id="fn4"><p>Schätzwert<a href="#fnref4">↩</a></p></li>
 </ol>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiQ291cnNlcmEgRGF0YSBTY2llbmNlIFNwZWNpYWxpemF0aW9uIgpzdWJ0aXRsZTogIjA2IFN0YXRpc3RpY2FsIEluZmVyZW5jZSIKYXV0aG9yOiAiR2VvcmcgTWF1YmFjaCIKZGF0ZTogIjQgSnVuZSAyMDE3IgpvdXRwdXQ6CiAgaHRtbF9kb2N1bWVudDogZGVmYXVsdAogIGh0bWxfbm90ZWJvb2s6IGRlZmF1bHQKLS0tCgojIFdlZWsgMDEKIyMgTW9kdWxlIDAxIEludHJvZHVjdGlvbgojIyMgSW50cm9kdWN0aW9uIFZpZGVvCgotIEZvcm1hbCBzdGF0aXN0aWNhbCBpbmZlcmVuY2UgXltTY2hsdXNzZm9sZ2VydW5nXSBpczogIkdlbmVyYXRpbmcgY29uY2x1c2lvbnMgYWJvdXQgYSBwb3B1bGF0aW9uIGZyb20gYSBub2lzeSBzYW1wbGUuIi4gIAotIFdpdGhvdXQgc3RhdGlzdGljYWwgaW5mZXJlbmNlLCB3ZSdyZSBzaW1wbHkgbGl2aW5nIHdpdGhpbiBvdXIgZGF0YS4gV2l0aCBzdGF0aXN0aWNhbCBpbmZlcmVuY2UsIHdlJ3JlIHRyeWluZyB0byBnZW5lcmF0ZSBuZXcga25vd2xlZGdlLiBXZSdyZSB0cnlpbmcgdG8gZXh0ZW5kIGJleW9uZCBvdXIgZGF0YSB0byBhIHBvcHVsYXRpb24gdG8gZ2l2ZSBhbnN3ZXJzLiBXaXRoIHN0YXRpc3RpY2FsIGluZmVyZW5jZSwgb3VyIGVzdGltYXRvcnMgaGF2ZSBhY3R1YWwgdGhpbmdzIHRoYXQgdGhleSdyZSBlc3RpbWF0aW5nLiAgCi0gU3ViamVjdCBvZiB0aGUgY291cnNlIGlzICJmcmVxdWVuY3kgc3R5bGUgc3RhdGlzdGljYWwgaW5mZXJlbmNlIi4gV2Ugd2FudCB0byBpbmZlciBmYWN0cyBhYm91dCBhIHBvcHVsYXRpb24gdXNpbmcgbm9pc3kgc3RhdGlzdGljYWwgZGF0YSB3aGVyZSB1bmNlcnRhaW50eSBtdXN0IGJlIGFjY291bnRlZCBmb3IuCi0gVGhlcmUgYSBkaWZmaWN1bHRpZXMgb2YgdHJ5aW5nIHRvIHVzZSBkYXRhIHRvIGNyZWF0ZSBnZW5lcmFsIGNvbmNsdXNpb25zIGFib3V0IGEgcG9wdWxhdGlvbjoKICAgIC0gSXMgdGhlIHNhbXBsZSByZXByZXNlbnRhdGl2ZSBvZiB0aGUgcG9wdWxhdGlvbiB0aGF0IHdlIHdvdWxkIGxpa2UgdG8gZHJhdyBpbmZlcmVuY2VzIGFib3V0PwogICAgLSBBcmUgdGhlcmUga25vd24gYW5kIG9ic2VydmVkLCBrbm93biBhbmQgdW5vYnNlcnZlZCBvciB1bmtub3duIGFuZCB1bm9ic2VydmVkIHZhcmlhYmxlcyB0aGF0IGNvbnRhbWluYXRlIG91ciBjb25jbHVzaW9ucz8KICAgIC0gSXMgdGhlcmUgc3lzdGVtYXRpYyBiaWFzIF5bVmVyemVycnVuZ10gY3JlYXRlZCBieSBtaXNzaW5nIGRhdGEgb3IgdGhlIGRlc2lnbiBvciBjb25kdWN0IG9mIHRoZSBzdHVkeT8KICAgIC0gV2hhdCByYW5kb21uZXNzIGV4aXN0cyBpbiB0aGUgZGF0YSBhbmQgaG93IGRvIHdlIHVzZSBvciBhZGp1c3QgZm9yIGl0PyBIZXJlIHJhbmRvbW5lc3MgY2FuIGVpdGhlciBieSBleHBsaWNpdCB2aWEgcmFuZG9taXphdGlvbiBvciByYW5kb20gc2FtcGxpbmcsIG9yIGltcGxpY2l0IGFzIHRoZSBhZ2dyZWdhdGlvbiBvZiBtYW55IGNvbXBsZXggdW5rbm93biBwcm9jZXNzZXMuCiAgICAtIEFyZSB3ZSB0cnlpbmcgdG8gZXN0aW1hdGUgYW4gdW5kZXJseWluZyBtZWNoYW5pc3RpYyBtb2RlbCBvZiBwaGVub21lbmEgdW5kZXIgc3R1ZHk/CgpbVHJhbnNjcnB0XSguL3RyYW5zY3JpcHRzL3dlZWstMDFfbW9kLTAxX2NoYXAtMDFfaW50cm9kdWN0aW9uX3RyYW5zY3JpcHQudHh0KSAgCltTdXBwbGVtZW50XSguL3N1cHBsZW1lbnRzL3dlZWstMDFfbW9kLTAxX2NoYXAtMDFfSW50cm9kdWN0aW9uX1N1cHBsZW1lbnQucGRmKSAgCgojIyMgQ291cnNlIE1hdGVyaWFscyAgCgotIFtEYXRhIFNjaWVuY2UgU3BlY2lhbGl6YXRpb24gb24gZ2l0XShodHRwczovL2dpdGh1Yi5jb20vYmNhZmZvL2NvdXJzZXMvdHJlZS9tYXN0ZXIvMDZfU3RhdGlzdGljYWxJbmZlcmVuY2UpCi0gW0NvdXJzZSBNYXRlcmlhbCBvbiBnaXRdKGh0dHBzOi8vZ2l0aHViLmNvbS9EYXRhU2NpZW5jZVNwZWNpYWxpemF0aW9uL2NvdXJzZXMvdHJlZS9tYXN0ZXIvMDZfU3RhdGlzdGljYWxJbmZlcmVuY2UpCgpDbG9uZSB0aGUgZGlyZWN0b3J5IHVzaW5nOgoKICAgIC0gZ2l0IGNsb25lIGh0dHBzOi8vZ2l0aHViLmNvbS9iY2FmZm8vY291cnNlcy5naXQgb3IgIAogICAgLSBnaXQgY2xvbmUgZ2l0QGdpdGh1Yi5jb206YmNhZmZvL2NvdXJzZXMuZ2l0ICAKCi0gW1lvdXR1YmVdKGh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3BsYXlsaXN0P2xpc3Q9UExwbC1nUWtRaXZYaUJtR3l6THJVanpzYmxtUXNMdGt6SikKCi0gW0NvdXJzZSBCb29rIEJ1eV0oaHR0cHM6Ly9sZWFucHViLmNvbS9MaXR0bGVJbmZlcmVuY2VCb29rKQotIFtDb3Vyc2UgQm9vayBPbmxpbmVdKGh0dHBzOi8vbGVhbnB1Yi5jb20vTGl0dGxlSW5mZXJlbmNlQm9vay9yZWFkKQotIFtDb3Vyc2UgQm9vayBnaXRodWJdKGh0dHBzOi8vZ2l0aHViLmNvbS9iY2FmZm8vTGl0dGxlSW5mZXJlbmNlQm9vaykKLSBbQ291cnNlIEJvb2sgbGVhbnB1Yl0oaHR0cHM6Ly9sZWFucHViLmNvbS9MaXR0bGVJbmZlcmVuY2VCb29rKSAob24gcHVyY2hhc2UsIGFsbCB1cGRhdGVzIGZyZWUsIGluY2x1ZGluZyBob21ld29yaykKCi0gVHdpdHRlcjogQnJpYW4gQ2FmZm86IChAYmNhZmZvKSwgUm9nZXIgUGVuZyAoQHJkcGVuZyksIEplZmYgTGVlayAoQGp0bGVlayksIFRoZSBEZXBhcnRtZW50IG9mIEJpb3N0YXQgKEBqaHViaW9zdGF0KS4KCi0gW0xlYXJuaW5nIENvbW11bml0eV0oaHR0cDovL2RhdGFzY2llbmNlc3BlY2lhbGl6YXRpb24uZ2l0aHViLmlvLykKLSBbQ29tbXVuaXR5IENvbnRyaWJ1dGluZ10oaHR0cHM6Ly9naXRodWIuY29tL0RhdGFTY2llbmNlU3BlY2lhbGl6YXRpb24vRGF0YVNjaWVuY2VTcGVjaWFsaXphdGlvbi5naXRodWIuaW8jY29udHJpYnV0aW5nKQoKIyMjIFF1aXp6ZXMKUXVpenplcyBjb3ZlciBkaWZmZXJlbnQgcGFydHMgb2YgdGhlIGNvdXJzZToKCi0gUXVpeiAxIGNvdmVycyBsZWN0dXJlcyAxIC0gNAotIFF1aXogMiBjb3ZlcnMgbGVjdHVyZXMgNSAtIDcKLSBRdWl6IDMgY292ZXJzIGxlY3R1cmVzIDggLSAxMAotIFF1aXogNCBjb3ZlcnMgbGVjdHVyZXMgOCAtIDEzCgpRdWl6IDMgYW5kIDQgY292ZXIgYSBsb3Qgb2Ygb3ZlcmxhcHBpbmcgbWF0ZXJpYWwuCgojIyMgSG9tZXdvcmsKCioqUmVtYXJrOioqIFRoZSBzZXF1ZW5jZSB3aXRoaW4gdGhlIGNvdXJzZSBtaWdodCBiZSBkaWZmZXJlbnQsIHBsZWFzZSBzZWUgY291cnNlIGJvb2shCgotIGh0dHA6Ly9iY2FmZm8uZ2l0aHViLmlvL2NvdXJzZXMvMDZfU3RhdGlzdGljYWxJbmZlcmVuY2UvaG9tZXdvcmsvaHcxLmh0bWwjMQotIGh0dHA6Ly9iY2FmZm8uZ2l0aHViLmlvL2NvdXJzZXMvMDZfU3RhdGlzdGljYWxJbmZlcmVuY2UvaG9tZXdvcmsvaHcyLmh0bWwjMQotIGh0dHA6Ly9iY2FmZm8uZ2l0aHViLmlvL2NvdXJzZXMvMDZfU3RhdGlzdGljYWxJbmZlcmVuY2UvaG9tZXdvcmsvaHczLmh0bWwjMQotIGh0dHA6Ly9iY2FmZm8uZ2l0aHViLmlvL2NvdXJzZXMvMDZfU3RhdGlzdGljYWxJbmZlcmVuY2UvaG9tZXdvcmsvaHc0Lmh0bWwjMQoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiQ291cnNlcmEgRGF0YSBTY2llbmNlIFNwZWNpYWxpemF0aW9uIgpzdWJ0aXRsZTogIjA2IFN0YXRpc3RpY2FsIEluZmVyZW5jZSIKYXV0aG9yOiAiR2VvcmcgTWF1YmFjaCIKZGF0ZTogIjQgSnVuZSAyMDE3IgpvdXRwdXQ6CiAgaHRtbF9kb2N1bWVudDogZGVmYXVsdAogIGh0bWxfbm90ZWJvb2s6IGRlZmF1bHQKLS0tCgojIFdlZWsgMDEKIyMgTW9kdWxlIDAxIEludHJvZHVjdGlvbgojIyMgSW50cm9kdWN0aW9uIFZpZGVvCgotIEZvcm1hbCBzdGF0aXN0aWNhbCBpbmZlcmVuY2UgXltTY2hsdXNzZm9sZ2VydW5nXSBpczogIkdlbmVyYXRpbmcgY29uY2x1c2lvbnMgYWJvdXQgYSBwb3B1bGF0aW9uIGZyb20gYSBub2lzeSBzYW1wbGUuIi4gIAotIFdpdGhvdXQgc3RhdGlzdGljYWwgaW5mZXJlbmNlLCB3ZSdyZSBzaW1wbHkgbGl2aW5nIHdpdGhpbiBvdXIgZGF0YS4gV2l0aCBzdGF0aXN0aWNhbCBpbmZlcmVuY2UsIHdlJ3JlIHRyeWluZyB0byBnZW5lcmF0ZSBuZXcga25vd2xlZGdlLiBXZSdyZSB0cnlpbmcgdG8gZXh0ZW5kIGJleW9uZCBvdXIgZGF0YSB0byBhIHBvcHVsYXRpb24gdG8gZ2l2ZSBhbnN3ZXJzLiBXaXRoIHN0YXRpc3RpY2FsIGluZmVyZW5jZSwgb3VyIGVzdGltYXRvcnMgaGF2ZSBhY3R1YWwgdGhpbmdzIHRoYXQgdGhleSdyZSBlc3RpbWF0aW5nLiAgCi0gU3ViamVjdCBvZiB0aGUgY291cnNlIGlzICJmcmVxdWVuY3kgc3R5bGUgc3RhdGlzdGljYWwgaW5mZXJlbmNlIi4gV2Ugd2FudCB0byBpbmZlciBmYWN0cyBhYm91dCBhIHBvcHVsYXRpb24gdXNpbmcgbm9pc3kgc3RhdGlzdGljYWwgZGF0YSB3aGVyZSB1bmNlcnRhaW50eSBtdXN0IGJlIGFjY291bnRlZCBmb3IuCi0gVGhlcmUgYSBkaWZmaWN1bHRpZXMgb2YgdHJ5aW5nIHRvIHVzZSBkYXRhIHRvIGNyZWF0ZSBnZW5lcmFsIGNvbmNsdXNpb25zIGFib3V0IGEgcG9wdWxhdGlvbjoKICAgIC0gSXMgdGhlIHNhbXBsZSByZXByZXNlbnRhdGl2ZSBvZiB0aGUgcG9wdWxhdGlvbiB0aGF0IHdlIHdvdWxkIGxpa2UgdG8gZHJhdyBpbmZlcmVuY2VzIGFib3V0PwogICAgLSBBcmUgdGhlcmUga25vd24gYW5kIG9ic2VydmVkLCBrbm93biBhbmQgdW5vYnNlcnZlZCBvciB1bmtub3duIGFuZCB1bm9ic2VydmVkIHZhcmlhYmxlcyB0aGF0IGNvbnRhbWluYXRlIG91ciBjb25jbHVzaW9ucz8KICAgIC0gSXMgdGhlcmUgc3lzdGVtYXRpYyBiaWFzIF5bVmVyemVycnVuZ10gY3JlYXRlZCBieSBtaXNzaW5nIGRhdGEgb3IgdGhlIGRlc2lnbiBvciBjb25kdWN0IG9mIHRoZSBzdHVkeT8KICAgIC0gV2hhdCByYW5kb21uZXNzIGV4aXN0cyBpbiB0aGUgZGF0YSBhbmQgaG93IGRvIHdlIHVzZSBvciBhZGp1c3QgZm9yIGl0PyBIZXJlIHJhbmRvbW5lc3MgY2FuIGVpdGhlciBieSBleHBsaWNpdCB2aWEgcmFuZG9taXphdGlvbiBvciByYW5kb20gc2FtcGxpbmcsIG9yIGltcGxpY2l0IGFzIHRoZSBhZ2dyZWdhdGlvbiBvZiBtYW55IGNvbXBsZXggdW5rbm93biBwcm9jZXNzZXMuCiAgICAtIEFyZSB3ZSB0cnlpbmcgdG8gZXN0aW1hdGUgYW4gdW5kZXJseWluZyBtZWNoYW5pc3RpYyBtb2RlbCBvZiBwaGVub21lbmEgdW5kZXIgc3R1ZHk/CgpbVHJhbnNjcnB0XSguL3RyYW5zY3JpcHRzL3dlZWstMDFfbW9kLTAxX2NoYXAtMDFfaW50cm9kdWN0aW9uX3RyYW5zY3JpcHQudHh0KSAgCltTdXBwbGVtZW50XSguL3N1cHBsZW1lbnRzL3dlZWstMDFfbW9kLTAxX2NoYXAtMDFfSW50cm9kdWN0aW9uX1N1cHBsZW1lbnQucGRmKSAgCgojIyMgQ291cnNlIE1hdGVyaWFscyAgCgotIFtEYXRhIFNjaWVuY2UgU3BlY2lhbGl6YXRpb24gb24gZ2l0XShodHRwczovL2dpdGh1Yi5jb20vYmNhZmZvL2NvdXJzZXMvdHJlZS9tYXN0ZXIvMDZfU3RhdGlzdGljYWxJbmZlcmVuY2UpCi0gW0NvdXJzZSBNYXRlcmlhbCBvbiBnaXRdKGh0dHBzOi8vZ2l0aHViLmNvbS9EYXRhU2NpZW5jZVNwZWNpYWxpemF0aW9uL2NvdXJzZXMvdHJlZS9tYXN0ZXIvMDZfU3RhdGlzdGljYWxJbmZlcmVuY2UpCgpDbG9uZSB0aGUgZGlyZWN0b3J5IHVzaW5nOgoKICAgIC0gZ2l0IGNsb25lIGh0dHBzOi8vZ2l0aHViLmNvbS9iY2FmZm8vY291cnNlcy5naXQgb3IgIAogICAgLSBnaXQgY2xvbmUgZ2l0QGdpdGh1Yi5jb206YmNhZmZvL2NvdXJzZXMuZ2l0ICAKCi0gW1lvdXR1YmVdKGh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3BsYXlsaXN0P2xpc3Q9UExwbC1nUWtRaXZYaUJtR3l6THJVanpzYmxtUXNMdGt6SikKCi0gW0NvdXJzZSBCb29rIEJ1eV0oaHR0cHM6Ly9sZWFucHViLmNvbS9MaXR0bGVJbmZlcmVuY2VCb29rKQotIFtDb3Vyc2UgQm9vayBPbmxpbmVdKGh0dHBzOi8vbGVhbnB1Yi5jb20vTGl0dGxlSW5mZXJlbmNlQm9vay9yZWFkKQotIFtDb3Vyc2UgQm9vayBnaXRodWJdKGh0dHBzOi8vZ2l0aHViLmNvbS9iY2FmZm8vTGl0dGxlSW5mZXJlbmNlQm9vaykKLSBbQ291cnNlIEJvb2sgbGVhbnB1Yl0oaHR0cHM6Ly9sZWFucHViLmNvbS9MaXR0bGVJbmZlcmVuY2VCb29rKSAob24gcHVyY2hhc2UsIGFsbCB1cGRhdGVzIGZyZWUsIGluY2x1ZGluZyBob21ld29yaykKCi0gVHdpdHRlcjogQnJpYW4gQ2FmZm86IChAYmNhZmZvKSwgUm9nZXIgUGVuZyAoQHJkcGVuZyksIEplZmYgTGVlayAoQGp0bGVlayksIFRoZSBEZXBhcnRtZW50IG9mIEJpb3N0YXQgKEBqaHViaW9zdGF0KS4KCi0gW0xlYXJuaW5nIENvbW11bml0eV0oaHR0cDovL2RhdGFzY2llbmNlc3BlY2lhbGl6YXRpb24uZ2l0aHViLmlvLykKLSBbQ29tbXVuaXR5IENvbnRyaWJ1dGluZ10oaHR0cHM6Ly9naXRodWIuY29tL0RhdGFTY2llbmNlU3BlY2lhbGl6YXRpb24vRGF0YVNjaWVuY2VTcGVjaWFsaXphdGlvbi5naXRodWIuaW8jY29udHJpYnV0aW5nKQoKIyMjIFF1aXp6ZXMKUXVpenplcyBjb3ZlciBkaWZmZXJlbnQgcGFydHMgb2YgdGhlIGNvdXJzZToKCi0gUXVpeiAxIGNvdmVycyBsZWN0dXJlcyAxIC0gNAotIFF1aXogMiBjb3ZlcnMgbGVjdHVyZXMgNSAtIDcKLSBRdWl6IDMgY292ZXJzIGxlY3R1cmVzIDggLSAxMAotIFF1aXogNCBjb3ZlcnMgbGVjdHVyZXMgOCAtIDEzCgpRdWl6IDMgYW5kIDQgY292ZXIgYSBsb3Qgb2Ygb3ZlcmxhcHBpbmcgbWF0ZXJpYWwuCgojIyMgSG9tZXdvcmsKCioqUmVtYXJrOioqIFRoZSBzZXF1ZW5jZSB3aXRoaW4gdGhlIGNvdXJzZSBtaWdodCBiZSBkaWZmZXJlbnQsIHBsZWFzZSBzZWUgY291cnNlIGJvb2shCgotIGh0dHA6Ly9iY2FmZm8uZ2l0aHViLmlvL2NvdXJzZXMvMDZfU3RhdGlzdGljYWxJbmZlcmVuY2UvaG9tZXdvcmsvaHcxLmh0bWwjMQotIGh0dHA6Ly9iY2FmZm8uZ2l0aHViLmlvL2NvdXJzZXMvMDZfU3RhdGlzdGljYWxJbmZlcmVuY2UvaG9tZXdvcmsvaHcyLmh0bWwjMQotIGh0dHA6Ly9iY2FmZm8uZ2l0aHViLmlvL2NvdXJzZXMvMDZfU3RhdGlzdGljYWxJbmZlcmVuY2UvaG9tZXdvcmsvaHczLmh0bWwjMQotIGh0dHA6Ly9iY2FmZm8uZ2l0aHViLmlvL2NvdXJzZXMvMDZfU3RhdGlzdGljYWxJbmZlcmVuY2UvaG9tZXdvcmsvaHc0Lmh0bWwjMQoKIyMgTW9kdWxlIDIgUHJvYmFiaWxpdHkKCkluIHRoaXMgbW9kdWxlIHdlIGRpc2N1c3MgcHJvYmFiaWxpdHksIHRoZSBmb3VuZGF0aW9uIG9mIHN0YXRpc3RpY2FsIGFuYWx5c2lzLiBQcm9iYWJpbGl0eSBhc3NpZ25zIGEgbnVtYmVyIGJldHdlZW4gMCBhbmQgMSB0byBldmVudHMgdG8gZ2l2ZSBhIHNlbnNlIG9mIHRoZSAiY2hhbmNlIiBvZiB0aGUgZXZlbnQuIFByb2JhYmlsaXR5IGhhcyBiZWNvbWUgb3VyIGRlZmF1bHQgbW9kZWwgZm9yIGFwcGFyZW50bHkgcmFuZG9tIHBoZW5vbWVuYS4gT3VyIGV2ZW50dWFsIGdvYWwgaXMgdG8gdXNlIHByb2JhYmlsaXR5IG1vZGVscywgb3VyIGZvcm1hbCBtZWNoYW5pc20gZm9yIGNvbm5lY3Rpbmcgb3VyIGRhdGEgdG8gYSBwb3B1bGF0aW9uLiBIb3dldmVyLCBiZWZvcmUgd2UgZ2V0IHRvIHByb2JhYmlsaXR5IG1vZGVscywgd2UgbmVlZCB0byB1bmRlcnN0YW5kIHRoZSBiYXNpY3Mgb2YgcHJvYmFiaWxpdHkgY2FsY3VsdXMuIFRoZSBuZXh0IGZldyBsZWN0dXJlcyBjb3ZlciB0aGVzZSBiYXNpY3MuCgojIyMgRnVydGhlciBSZWFkaW5nCgotIE1vcmUgY29tcGxldGUgdHJlYXRtZW50IG9mIHRoZSB0b3BpYyBpbiBjbGFzcyAiTWF0aGVtYXRpY2FsIEJpb3N0YXRpc3RpY3MgQm9vdCBDYW1wIDEiIGF0OiAKCiAgICAtIGh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9amtVcURWdHBLczQmbGlzdD1QTHBsLWdRa1FpdlhoazZxU3lpTmo1MXFhbWpBdFpJU0otCiAgICAtIGh0dHBzOi8vd3d3LmNvdXJzZXJhLm9yZy9sZWFybi9iaW9zdGF0aXN0aWNzCiAgICAtaHR0cHM6Ly9naXRodWIuY29tL2JjYWZmby9DYWZmby1Db3Vyc2VyYQogICAgCiMjIyBWaWRlbyAxIEludHJvZHVjdGlvbiB0byBwcm9iYWJpbGl0eQoKLSBJbiBhbiByYW5kb20gbnVtYmVyIGV4cGVyaW1lbnQgYSBwcm9iYWxpdHkgbWVhc3VyZSBpcyBhIHBvcHVsYXRpb24gdGhhdCBzdW1tYXJpemVzIHRoZSByYW5kb21uZXNzLgotICBXaGVuIHdlIHRhbGsgYWJvdXQgcHJvYmFiaWxpdHksIHdlJ3JlIG5vdCB0YWxraW5nIGFib3V0IHNvbWV0aGluZyB0aGF0IGlzIGluIHRoZSBkYXRhIHRoYXQgd2UgaGF2ZSwgYnV0IGFzIGEgY29uY2VwdHVhbCB0aGluZyB0aGF0IGV4aXN0cyBpbiB0aGUgcG9wdWxhdGlvbiB0aGF0IHdlIHdvdWxkIGxpa2UgdG8gZXN0aW1hdGUuICAKLSBUaGUgcHJvYmFiaWxpdHkgdGFrZXMgYSBwb3NzaWJsZSBvdXRjb21lIG9mIHRoZSBleHBlcmltZW50IGFuZCBhc3NpZ25zIGl0IGEgbnVtYmVyIGJldHdlZW4gMCBhbmQgMS4gIAouIFByb2JhYmlsaXR5IG11c3QgZm9sbG93IHRoZXNlIHJ1bGVzOgogICAgLSBUaGUgcHJvYmFiaWxpdHkgdGhhdCBub3RoaW5nIG9jY3VycyBpcyAwLgogICAgLSBUaGUgcHJvYmFibGl0eSB0aGF0IHNvbWV0aGluZyBvY2N1cnMgaXMgMS4KICAgIC0gVGhlIHByb2JhYmlsaXR5IG9mIHNvbWV0aGluZyBpcyAxIG1pbnVzIHRoZSBwcm9iYWJpbGl0eSB0aGF0IHRoZSBvcHBvc2l0ZSBvY2N1cnMuCiAgICAtIFRoZSBwcm9iYWJpbGl0eSBvZiBhdCBsZWFzdCBvbmUgb2YgdHdvIChvciBtb3JlKSB0aGluZ3MgdGhhdCBjYW4gbm90IHNpbXVsdGFuZW91c2x5IG9jY3VyICg9IG11dHVhbGx5IGV4Y2x1c2l2ZSkgaXMgdGhlIHN1bSBvZiB0aGVpciByZXNwZWN0aXZlIHByb2JhYmxpdGllcy4KICAgIC0gSWYgYW4gZXZlbnQgQSBpbXBsaWVzIG9uIHRoZSBvY2N1cmFuY2Ugb2YgZXZlbnQgQiwgdGhlbiB0aGUgcHJvYmFiaWxpdHkgb2YgQSBvY2N1cmluZyBpcyBsZXNzIHRoYW4gdGhlIHByb2JhYmlsaXR5IHRoYXQgQiBvY2N1cnMuCiAgICAtIEZvciBhbnkgdHdvIGV2ZW50cyB0aGUgcHJvYmFiaWxpdHkgdGhhdCBhdCBsZWFzdCBvbmUgb2NjdXJzIGlzIHRoZSBzdW0gb2YgdGhlaXIgcHJvYmFiaWxpdGllcyBtaW51cyB0aGVpciBpbnRlcnNlY3Rpb24uICAKCiMjIyBWaWRlbyAyIFByb2JhYmlsaXR5IE1hc3MgRnVuY3Rpb24gKFBNRikKCiMjIyMgUmFuZG9tIFZhcmlhYmxlCgotIEEgcmFuZG9tIHZhcmlhYmxlIGlzIGEgbnVtZXJpYyBvdXRjb21lIG9mIGFuIGV4cGVyaW1lbnQuCi0gUmFuZG9tIHZhcmlhYmxlcyBjb21lIGluIHR3byB2YXJpZXRpZXM6IGRpc2NyZXRlIGFuZCBjb250aW51b3VzOgogICAgLSBkaXNjcmV0ZSB2YXJpYWJsZXM6CiAgICAgICAgLSB0YWtlIG9ubHkgYSBjb3VudGFibGUgbnVtYmVyIG9mIHBvc3NpYmlsaXRpZXMKICAgICAgICAtIHdlIHRhbGsgYWJvdXQgdGhlIHBvc3NpYmlsaXR5IHRoYXQgdGhleSB0YWtlIHNwZWNpZmljIHZhbHVlcwogICAgLSBjb250aW5vdXMgdmFyaWFibGVzOgogICAgICAgIC0gY2FuIHRha2UgYW55IHZhbHVlIG9uIHRoZSByZWFsIGxpbmUgKG9yIGEgc3Vic2V0IG9mIHRoZSByZWFsIGxpbmUpCiAgICAgICAgLSB3ZSB0YWxrIGFib3V0IHRoZSBwcm9iYWJpbGl0eSB0aGF0IHRoZXkgbGF5IHdpdGhpbiBzb21lIHJhbmdlLgoKIyMjIyBQcm9iYWJpbGl0eSBNQVNTIEZ1bmN0aW9uIChQTUYpICAKCi0gQSBwcm9iYWJpbGl0eSBtYXNzIGZ1bmN0aW9uIGV2YWx1YXRlZCBhdCBhIHZhbHVlIGNvcnJlc3BvbmRzIHRvIHRoZSBwcm9iYWJpbGl0eSB0aGF0IHRoZSByYW5kb20gdmFyaWFibGUgdGFrZXMgdGhhdCB2YWx1ZS4gIAotIFRvIGJlIHZhbGlkIFBNRiBhIGZ1bmN0aW9uICJwIiBtdXN0IHNhdGlzZnk6CiAgICAtIEl0IG11c3QgYmUgZXF1YWwgdG8gb3IgbGFuZ2VyIHRoYW4gIjAiLgogICAgLSBUaGUgc3VtIG9mIHBvc3NpYmxlIHZhbHVlcyBhZGRzIHVwIHRvIDEuCgojIyMjIFByb2JhYmlsaXR5IERlbnNpdHkgRnVuY3Rpb24gKFBERikgIAoKLSBUaGUgcHJvYmFiaWxpdHkgZGVuc2l0eSBmdW5jdGlvbiBpcyBhIGZ1bmN0aW9uIHRoYXQgaXMgYXNzb2NpYXRlZCB3aXRoIGEgY29udGludW91cyB2YXJpYWJsZS4gIAotIEFyZWFzIHVuZGVyIHRoZSBQREYgY29ycmVzcG9uZCB0byB0aGUgcHJvYmFiaWxpdGllcyBmb3IgdGhhdCByYW5kb20gdmFyaWFibGUuICAKLSBBIHZhbGlkIFBERiBtdXN0IHNhdGlzZnk6CiAgICAtIEl0IG11c3QgYmUgZXF1YWwgdG8gb3IgbGFyZ2VyIHRoYW4gIjAiIGV2ZXJ5d2hlcmUuCiAgICAtIFRoZSB0b3RhbCBhcmVhIHVuZGVyIGl0IG11c3QgYmUgb25lLgoKIyMjIEN1bXVsYXRpdmUgRGlzdHJpYnV0aW9uIEZ1bmN0aW9uIChDREYpIGFuZCBTdXJ2aXZhbCBGdW5jdGlvbiAoU0YpICAKCkNlcnRhaW4gYXJlYXMgYXJlIHNvIHVzZWZ1bCB0aGF0IHdlIGdpdmUgdGhlbSBuYW1lczoKCjEuIFRoZSAqKkN1bXVsYXRpdmUgRGlzdHJpYnV0aW9uIEZ1bmN0aW9uIChDREYpKiogb2YgYSByYW5kb20gdmFyaWFibGUgIlgiIChkaXNjcmV0ZSBvciBjb250aW51b3VzKSByZXR1cm5zIHRoZSBwcm9iYWJpbGl0eSB0aGF0IHRoZSByYW5kb20gdmFyaWFibGUgaXMgbGVzcyB0aGFuIG9yIGVxdWFsIHRvIHRoZSB2YWx1ZSB4OgoKICAgJEYoeCkgPSBQKFggPD0geCkkICAgIyB3aXRoIFAgPSBwcm9iYWJpbGl0eQoKMi4gVGhlICoqU3Vydml2YWwgRnVuY3Rpb24gKFNGKSoqIG9mIGEgcmFuZG9tIHZhcmlhYmxlICJYIiBpcyBkZWZpbmVkIGFzIHRoZSBwcm9iYWJpbGl0eSB0aGF0IHRoZSByYW5kb20gdmFyaWFibGUgaXMgZ3JlYXRlciB0aGFuIHRoZSB2YWx1ZSB4OgoKICAkUyh4KSA9IFAoWCA+PSB4KSQgICAjIHdpdGggUCA9IHByb2JhYmlsaXR5CgozLiBOb3RpY2UgdGhhdDoKCiAgJFMoeCkgPSAxIC0gRih4KSQKCgojIyMgUXVuYXRpbGVzCgotIFF1YW50aWxlcyBhcmUgc2FtcGxlIHF1YW50aXRpZXMuIEhlcmUgd2UgZGVmaW5lIHRoZWlyIHBvcHVsYXRpb24gYW5hbG9ncy4KCiMjIyMgRGVmaW5pdGlvbiBRdWFudGlsZQoKLSBUaGUgJGF7dGh9JCAqKnF1YW50aWxlKiogb2YgZGlzdHJpYnV0aW9uIHdpdGggZGlzdHJpYnV0aW9uIGZ1bmN0aW9uICRGJCBpcyBhIHBvaW50ICR4X1xhbHBoYSQgc28gdGhhdCAkRih4X1xhbHBoYSkgPSBcYWxwaGEkLiAgCgojIyMjIERlZmluaXRpb24gUGVyY2VudGlsZQoKLSBBICoqcGVyY2VudGlsZSoqIGlzIHNpbXBseSBhIHF1YW50aWxlIHdpdGggJFxhbHBoYSQgZXhwcmVzc2VkIGFzIGEgcGVyY2VudC4KCiMjIyMgRGVmaW5pdGlvbiBNZWRpYW4KCi0gVGhlICoqbWVkaWFuKiogaXMgdGhlICQ1MF57dGh9JCBwZXJjZW50aWxlLgoKIyMjIyBFeGFtbXBsZQoKVGhlICQ5NcKwe3RofSQgcGVyY2VudGlsZSBvZiBhIGRpc3RyaWJ1dGlvbiBpcyB0aGUgcG9pbnQgc28gdGhhdDoKCjEuIFRoZSBwcm9iYWJpbGl0eSB0aGF0IGEgcmFuZG9tIHZhcmlhYmxlIGRyYXduIGZyb20gdGhlIHBvcHVsYXRpb24gaXMgbGVzcyBpcyA5NSAlLgoyLiBUaGUgcHJvYmFiaWxpdHkgdGhhdCBhIHJhbmRvbSB2YXJpYWJsZSBkcmF3biBmcm9tIHRoZSBwb3B1bGF0aW9uIGlzIG1vcmUgaXMgNSAlLgoKIyMjIyBRdWFudGlsZXMgaW4gUgoKUiBjYW4gYXBwcm94aW1hdGUgcXVhbnRpbGVzIGZvciB5b3UgZm9yIGNvbW1vbiBkaXN0cmlidXRpb25zOgoKYGBge3J9CiMgcWJldGEocCwgc2hhcGUxLCBzaGFwZTIsIG5jcCA9IDAsIGxvd2VyLnRhaWwgPSBUUlVFLCBsb2cucCA9IEZBTFNFKQojIHAgPSB2ZWN0b3Igb2YgcHJvYmFiaWxpdGllcwojIHNoYXBlMSwgc2hhcGUyID0gbm9uLW5lZ2F0aXZlIHBhcmFtZXRlcnMgb2YgdGhlIEJldGEgZGlzdHJpYnV0aW9uCnFiZXRhKDAuNSwgMiwgMSkKYGBgCgojIyMgU3VtbWFyeQoKLSBZb3UgbWlnaHQgYmUgd29uZGVyaW5nIGF0IHRoaXMgcG9pbnQgIkkgaGF2ZSBoZWFyZCBvZiB0aGUgbWVkaWFuIGJlZm9yZSwgaXQgZGlkIG5vdCByZXF1aXJlIGludGVncmF0aW4uIFdoZXJlIGlzIHRoZSBkYXRhPyIuICAKLSBXZSBhcmUgcmVmZXJyaW5nIHRvICoqcG9wdWxhdGlvbiBxdWFudGl0aWVzKiouIFRoZXJlZm9yZSwgdGhlIG1lZGlhbiBiZWluZyBkaXNjdXNzZWQgaXMgdGhlIHBvcHVsYXRpb24gbWVkaWFuLiAgCi0gQSBwcm9iYWJpbGl0eSBtb2RlbCBjb25uZWN0cyB0aGUgZGF0YSB0byB0aGUgcG9wdWxhdGlvbiB1c2luZyBhc3N1bXB0aW9ucy4gIAotIFRoZXJlZm9yZSwgdGhlIG1lZGlhbiB3ZSBhcmUgZGlzY3Vzc2luZyBpcyB0aGUgKiplc3RpbWFuZCoqIF5bU2Now6R0enVuZ10sIHRoZSBzYW1wbGUgbWVkaWFuIHdpbGwgYmUgdGhlICoqZXN0aW1hdG9yKiogXltTY2jDpHR6d2VydF0uICAKCg==</div>
 
 
 

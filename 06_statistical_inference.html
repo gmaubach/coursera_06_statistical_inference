@@ -190,6 +190,139 @@ $(document).ready(function () {
 </ul>
 </div>
 </div>
+<div id="module-2-probability" class="section level2">
+<h2>Module 2 Probability</h2>
+<div id="further-reading" class="section level3">
+<h3>Further Reading</h3>
+<ul>
+<li><p>More complete treatment of the topic in class “Mathematical Biostatistics Boot Camp 1” at:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=jkUqDVtpKs4&amp;list=PLpl-gQkQivXhk6qSyiNj51qamjAtZISJ-" class="uri">https://www.youtube.com/watch?v=jkUqDVtpKs4&amp;list=PLpl-gQkQivXhk6qSyiNj51qamjAtZISJ-</a></li>
+<li><a href="https://www.coursera.org/learn/biostatistics" class="uri">https://www.coursera.org/learn/biostatistics</a> -<a href="https://github.com/bcaffo/Caffo-Coursera" class="uri">https://github.com/bcaffo/Caffo-Coursera</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="random-variable" class="section level3">
+<h3>Random Variable</h3>
+<ul>
+<li>A random variable is a numeric outcome of an experiment.</li>
+<li>Random variables come in two varieties: discrete and continuous:
+<ul>
+<li>discrete variables:
+<ul>
+<li>take only a countable number of possibilities</li>
+<li>we talk about the possibility that they take specific values</li>
+</ul></li>
+<li>continous variables:
+<ul>
+<li>can take any value on the real line (or a subset of the real line)</li>
+<li>we talk about the probability that they lay within some range.</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="probability-defined" class="section level3">
+<h3>Probability Defined</h3>
+<ul>
+<li>In an random number experiment a probality measure is a population that summarizes the randomness.</li>
+<li>When we talk about probability, we’re not talking about something that is in the data that we have, but as a conceptual thing that exists in the population that we would like to estimate.<br />
+</li>
+<li>The probability takes a possible outcome of the experiment and assigns it a number between 0 and 1.<br />
+. Probability must follow these rules:
+<ul>
+<li>The probability that nothing occurs is 0.</li>
+<li>The probablity that something occurs is 1.</li>
+<li>The probability of something is 1 minus the probability that the opposite occurs.</li>
+<li>The probability of at least one of two (or more) things that can not simultaneously occur (= mutually exclusive) is the sum of their respective probablities.</li>
+<li>If an event A implies on the occurance of event B, then the probability of A occuring is less than the probability that B occurs.</li>
+<li>For any two events the probability that at least one occurs is the sum of their probabilities minus their intersection.</li>
+</ul></li>
+</ul>
+</div>
+<div id="probability-mass-function-pmf" class="section level3">
+<h3>Probability MASS Function (PMF)</h3>
+<ul>
+<li>A probability mass function evaluated at a value corresponds to the probability that the random variable takes that value.<br />
+</li>
+<li>To be valid PMF a function “p” must satisfy:
+<ul>
+<li>It must be equal to or langer than “0”.</li>
+<li>The sum of possible values adds up to 1.</li>
+</ul></li>
+</ul>
+</div>
+<div id="probability-density-function-pdf" class="section level3">
+<h3>Probability Density Function (PDF)</h3>
+<ul>
+<li>The probability density function is a function that is associated with a continuous variable.<br />
+</li>
+<li>Areas under the PDF correspond to the probabilities for that random variable.<br />
+</li>
+<li>A valid PDF must satisfy:
+<ul>
+<li>It must be equal to or larger than “0” everywhere.</li>
+<li>The total area under it must be one.</li>
+</ul></li>
+</ul>
+</div>
+<div id="cumulative-distribution-function-cdf-and-survival-function-sf" class="section level3">
+<h3>Cumulative Distribution Function (CDF) and Survival Function (SF)</h3>
+<p>Certain areas are so useful that we give them names:</p>
+<ol style="list-style-type: decimal">
+<li>The <strong>Cumulative Distrution Function (CDF)</strong> of a random variable “X” (discrete or continuous) returns the probability that the random variable is less than or equal to the value x:</li>
+</ol>
+<p><span class="math inline">\(F(x) = P(X &lt;= x)\)</span> # with P = probability</p>
+<ol start="2" style="list-style-type: decimal">
+<li>The <strong>Survival Function (SF)</strong> of a random variable “X” is defined as the probability that the random variable is greater than the value x:</li>
+</ol>
+<p><span class="math inline">\(S(x) = P(X &gt;= x)\)</span> # with P = probability</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Notice that:</li>
+</ol>
+<p><span class="math inline">\(S(x) = 1 - F(x)\)</span></p>
+</div>
+<div id="qunatiles" class="section level3">
+<h3>Qunatiles</h3>
+<ul>
+<li>Quantiles are sample quantities. Here we define their population analogs.</li>
+</ul>
+<div id="definition-quantile" class="section level4">
+<h4>Definition Quantile</h4>
+<ul>
+<li>The <span class="math inline">\(a{th}\)</span> <strong>quantile</strong> of distribution with distribution function <span class="math inline">\(F\)</span> is a point <span class="math inline">\(x_\alpha\)</span> so that <span class="math inline">\(F(x_\alpha) = \alpha\)</span>.</li>
+</ul>
+</div>
+<div id="definition-percentile" class="section level4">
+<h4>Definition Percentile</h4>
+<ul>
+<li>A <strong>percentile</strong> is simply a quantile with <span class="math inline">\(\alpha\)</span> expressed as a percent.</li>
+</ul>
+</div>
+<div id="definition-median" class="section level4">
+<h4>Definition Median</h4>
+<ul>
+<li>The <strong>median</strong> is the <span class="math inline">\(50^{th}\)</span> percentile.</li>
+</ul>
+</div>
+<div id="exammple" class="section level4">
+<h4>Exammple</h4>
+<p>The <span class="math inline">\(95°{th}\)</span> percentile of a distribution is the point so that:</p>
+<ol style="list-style-type: decimal">
+<li>The probability that a random variable drawn from the population is less is 95 %.</li>
+<li>The probability that a random variable drawn from the population is more is 5 %.</li>
+</ol>
+</div>
+<div id="quantiles-in-r" class="section level4">
+<h4>Quantiles in R</h4>
+<p>R can approximate quantiles for you for common distributions:</p>
+<pre class="r"><code># qbeta(p, shape1, shape2, ncp = 0, lower.tail = TRUE, log.p = FALSE)
+# p = vector of probabilities
+# shape1, shape2 = non-negative parameters of the Beta distribution
+qbeta(0.5, 2, 1)</code></pre>
+<pre><code>## [1] 0.7071068</code></pre>
+</div>
+</div>
+</div>
 </div>
 <div class="footnotes">
 <hr />

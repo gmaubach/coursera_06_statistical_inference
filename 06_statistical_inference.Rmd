@@ -66,3 +66,114 @@ Quiz 3 and 4 cover a lot of overlapping material.
 - http://bcaffo.github.io/courses/06_StatisticalInference/homework/hw3.html#1
 - http://bcaffo.github.io/courses/06_StatisticalInference/homework/hw4.html#1
 
+## Module 2 Probability
+
+In this module we discuss probability, the foundation of statistical analysis. Probability assigns a number between 0 and 1 to events to give a sense of the "chance" of the event. Probability has become our default model for apparently random phenomena. Our eventual goal is to use probability models, our formal mechanism for connecting our data to a population. However, before we get to probability models, we need to understand the basics of probability calculus. The next few lectures cover these basics.
+
+### Further Reading
+
+- More complete treatment of the topic in class "Mathematical Biostatistics Boot Camp 1" at: 
+
+    - https://www.youtube.com/watch?v=jkUqDVtpKs4&list=PLpl-gQkQivXhk6qSyiNj51qamjAtZISJ-
+    - https://www.coursera.org/learn/biostatistics
+    -https://github.com/bcaffo/Caffo-Coursera
+    
+### Video 1 Introduction to probability
+
+- In an random number experiment a probality measure is a population that summarizes the randomness.
+-  When we talk about probability, we're not talking about something that is in the data that we have, but as a conceptual thing that exists in the population that we would like to estimate.  
+- The probability takes a possible outcome of the experiment and assigns it a number between 0 and 1.  
+. Probability must follow these rules:
+    - The probability that nothing occurs is 0.
+    - The probablity that something occurs is 1.
+    - The probability of something is 1 minus the probability that the opposite occurs.
+    - The probability of at least one of two (or more) things that can not simultaneously occur (= mutually exclusive) is the sum of their respective probablities.
+    - If an event A implies on the occurance of event B, then the probability of A occuring is less than the probability that B occurs.
+    - For any two events the probability that at least one occurs is the sum of their probabilities minus their intersection.  
+
+### Video 2 Probability Mass Function (PMF)
+
+#### Random Variable
+
+- A random variable is a numeric outcome of an experiment.
+- Random variables come in two varieties: discrete and continuous:
+    - discrete variables:
+        - take only a countable number of possibilities
+        - we talk about the possibility that they take specific values
+    - continous variables:
+        - can take any value on the real line (or a subset of the real line)
+        - we talk about the probability that they lay within some range.
+
+#### Probability MASS Function (PMF)  
+
+- A probability mass function evaluated at a value corresponds to the probability that the random variable takes that value.  
+- To be valid PMF a function "p" must satisfy:
+    - It must be equal to or langer than "0".
+    - The sum of possible values adds up to 1.
+
+#### Probability Density Function (PDF)  
+
+- The probability density function is a function that is associated with a continuous variable.  
+- Areas under the PDF correspond to the probabilities for that random variable.  
+- A valid PDF must satisfy:
+    - It must be equal to or larger than "0" everywhere.
+    - The total area under it must be one.
+
+### Cumulative Distribution Function (CDF) and Survival Function (SF)  
+
+Certain areas are so useful that we give them names:
+
+1. The **Cumulative Distribution Function (CDF)** of a random variable "X" (discrete or continuous) returns the probability that the random variable is less than or equal to the value x:
+
+   $F(x) = P(X <= x)$   # with P = probability
+
+2. The **Survival Function (SF)** of a random variable "X" is defined as the probability that the random variable is greater than the value x:
+
+  $S(x) = P(X >= x)$   # with P = probability
+
+3. Notice that:
+
+  $S(x) = 1 - F(x)$
+
+
+### Qunatiles
+
+- Quantiles are sample quantities. Here we define their population analogs.
+
+#### Definition Quantile
+
+- The $a{th}$ **quantile** of distribution with distribution function $F$ is a point $x_\alpha$ so that $F(x_\alpha) = \alpha$.  
+
+#### Definition Percentile
+
+- A **percentile** is simply a quantile with $\alpha$ expressed as a percent.
+
+#### Definition Median
+
+- The **median** is the $50^{th}$ percentile.
+
+#### Exammple
+
+The $95°{th}$ percentile of a distribution is the point so that:
+
+1. The probability that a random variable drawn from the population is less is 95 %.
+2. The probability that a random variable drawn from the population is more is 5 %.
+
+#### Quantiles in R
+
+R can approximate quantiles for you for common distributions:
+
+```{r}
+# qbeta(p, shape1, shape2, ncp = 0, lower.tail = TRUE, log.p = FALSE)
+# p = vector of probabilities
+# shape1, shape2 = non-negative parameters of the Beta distribution
+qbeta(0.5, 2, 1)
+```
+
+### Summary
+
+- You might be wondering at this point "I have heard of the median before, it did not require integratin. Where is the data?".  
+- We are referring to **population quantities**. Therefore, the median being discussed is the population median.  
+- A probability model connects the data to the population using assumptions.  
+- Therefore, the median we are discussing is the **estimand** ^[Schätzung], the sample median will be the **estimator** ^[Schätzwert].  
+
