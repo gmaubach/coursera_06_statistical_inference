@@ -83,7 +83,7 @@ In this module we discuss probability, the foundation of statistical analysis. P
 - In an random number experiment a probality measure is a population that summarizes the randomness.
 -  When we talk about probability, we're not talking about something that is in the data that we have, but as a conceptual thing that exists in the population that we would like to estimate.  
 - The probability takes a possible outcome of the experiment and assigns it a number between 0 and 1.  
-. Probability must follow these rules:
+- Probability must follow these rules:
     - The probability that nothing occurs is 0.
     - The probablity that something occurs is 1.
     - The probability of something is 1 minus the probability that the opposite occurs.
@@ -93,23 +93,55 @@ In this module we discuss probability, the foundation of statistical analysis. P
 
 ### Video 2 Probability Mass Function (PMF)
 
+#### Introduction
+
+- Probability calculus is useful for understanding rules that probabilities must follow.  
+- However we need ways to model and think about probabilities for numeric outcomes of experiments.  
+- Density and mass functions for random variables are the best starting point for this.  
+- **Please note:**  Everything we are talking about up to this point is a population quantity not a statement of what occurs in the data.  
+- In the course we use the data to estimate properties of the population.  
+
 #### Random Variable
 
 - A random variable is a numeric outcome of an experiment.
 - Random variables come in two varieties: discrete and continuous:
     - discrete variables:
-        - take only a countable number of possibilities
+        - used only for a countable number of possibilities
         - we talk about the possibility that they take specific values
+        - these values do not need to be numeric but it is possible to assign numeric values to it, e. g. hair color, e. g. 1 = brown, 2 = blond, 3 = black and so on
     - continous variables:
-        - can take any value on the real line (or a subset of the real line)
+        - can take any value in a continuum (or a subset of it)
         - we talk about the probability that they lay within some range.
+- Working with discrete and continuous variables:  
+    - discrete variables: we assign a value to every value that they can take
+    - continuous variables: we assign values to ranges that they can take
+
+#### Examples for Random Variables  
+
+- Discrete variables:  
+    - The outcome of a flip of a coin can take only head or tail, coded as 1 = head and 2 = tail or 1 = tail and 2 = head.  
+    - The outcome of the roll of a die can take only one of six possible values, best coded as 1, 2, 3, 4, 5, 6.  
+    - The web traffic of a given day. The web hits can be counted. We treat it as discrete. We do not know however what the upper bound is. Thus it is a special kind of a discrete variable. We use the Poisson distribution to model this.  
+    - Hypertension ^[Bluthochdruck] can take "has hypertension" and "has no hypertension". This can be coded as 0/1.
+- Continuous variables:
+    - The BMI is a continuous random variable with a baseline measurement.  
+    - Intelligence quotients are often modeled as continuous.  
 
 #### Probability MASS Function (PMF)  
 
+- We work with discrete random variables by assigning a value to every possible outcome that they can take.  
+- We assign the discrete random variable a function, the **Probability Mass Function**.  
+- The Probability Mass Function (PMF) that takes any value a discrete random variable can take and assigns the probability that it takes that specific value.  
 - A probability mass function evaluated at a value corresponds to the probability that the random variable takes that value.  
-- To be valid PMF a function "p" must satisfy:
+- To be valid PMF a function "p" must satisfy the same rules we defined at the beginning of the class:
     - It must be equal to or langer than "0".
     - The sum of possible values adds up to 1.
+- Example: For the roll of a die we assign 1/6 for the value one, 1/6 for the value two, 1/6 for the value 3 and so on. The probability of all possible outcomes must add up to one which it actually does.  
+
+#### Example for the Probability Mass Function (PMF)  
+
+# %TODO%
+# Weiter bei 5:18 Minuten
 
 #### Probability Density Function (PDF)  
 
